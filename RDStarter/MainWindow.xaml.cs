@@ -31,11 +31,24 @@ namespace RDStarter
 
         private void connectClick(Object sender, EventArgs e)
         {
-            bool requestControl = (bool)this.control.IsChecked;
-            bool requestConsent = (bool)this.consent.IsChecked;
-            string DeviceName = this.TargetChoice.SelectedItem.ToString();
+            Button connectButton = (Button)sender;
+            if(connectButton.Name.Equals("adconnect"))
+            {
+                bool requestControl = (bool)this.adcontrol.IsChecked;
+                bool requestConsent = (bool)this.adconsent.IsChecked;
+                string DeviceName = this.TargetChoice.SelectedItem.ToString();
 
-            connectToDevice(DeviceName, requestControl, requestConsent);
+                connectToDevice(DeviceName, requestControl, requestConsent);
+            }
+            else if (connectButton.Name.Equals("wsconnect"))
+            {
+                bool requestControl = (bool)this.wscontrol.IsChecked;
+                bool requestConsent = (bool)this.wsconsent.IsChecked;
+                string DeviceName = this.TargetDevice.Text;
+
+                connectToDevice(DeviceName, requestControl, requestConsent);
+            }
+            
         }
 
         /*
