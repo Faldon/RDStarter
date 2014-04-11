@@ -1,0 +1,28 @@
+﻿<Window x:Class="RDStarter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ADDS FastConnect" Height="221" Width="350"
+        ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <TabControl>
+        <TabItem Name="ADMode" Header="Active Directory Mode">
+            <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Height="158" Width="345" Margin="0,15,-3,-4">
+                <Label Content="Devicename:" Margin="10,0,0,42" />
+                <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Name="TargetChoice" ToolTip="Select the device you want to connet to" SelectedIndex="0" Margin="90,0,0,0">
+                </ComboBox>
+                <CheckBox Name="adcontrol" Margin="10,45,0,83" IsChecked="True">Request Control</CheckBox>
+                <CheckBox Name="adconsent" Margin="10,75,0,42">Request Consent</CheckBox>
+                <Button Name="adconnect" Margin="10,116,255,21" Click="connectClick">Connect</Button>
+            </Grid>
+        </TabItem>
+        <TabItem Name="WSMode" Header="Workstation Mode">
+            <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Height="158" Width="345" Margin="0,15,-3,-4">
+                <Label Content="Hostname or IP:" Margin="10,0,240,130" />
+                <TextBox Name="TargetDevice" Margin="110,0,100,130"></TextBox>
+                <CheckBox Name="wscontrol" Margin="10,45,0,83" IsChecked="True">Request Control</CheckBox>
+                <CheckBox Name="wsconsent" Margin="10,75,0,42">Request Consent</CheckBox>
+                <Button Name="wsconnect" Margin="10,116,255,21" Click="connectClick">Connect</Button>
+            </Grid>
+            
+        </TabItem>
+    </TabControl>
+</Window>
