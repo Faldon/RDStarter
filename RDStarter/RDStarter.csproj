@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6656619F-C17A-4491-A0B8-CA956EDFB614}</ProjectGuid>
+    <ProjectGuid>{0B279736-9681-497C-9DAF-5A7C8345ECEB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RDStarter</RootNamespace>
