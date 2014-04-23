@@ -63,7 +63,15 @@ namespace RDStarter
 
             foreach(SearchResult item in ds.FindAll())
             {
-                String osVersion = item.GetDirectoryEntry().Properties["operatingSystemVersion"].Value.ToString();
+                String osVersion;
+                try
+                {
+                    osVersion = item.GetDirectoryEntry().Properties["operatingSystemVersion"].Value.ToString();
+                }
+                catch
+                {
+                    continue;
+                }
                 if (osVersion.Equals("6.3 (9600)"))
                 {
                     targetDevices.Add(item.GetDirectoryEntry().Properties["dNSHostName"].Value.ToString());
