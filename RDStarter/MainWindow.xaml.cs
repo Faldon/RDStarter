@@ -77,6 +77,7 @@ namespace RDStarter
                     targetDevices.Add(item.GetDirectoryEntry().Properties["dNSHostName"].Value.ToString());
                 };
             }
+            targetDevices.Sort();
             return targetDevices;
         }
 
