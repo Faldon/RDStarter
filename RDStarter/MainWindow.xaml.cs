@@ -72,7 +72,7 @@ namespace RDStarter
                 {
                     continue;
                 }
-                if (osVersion.Equals("6.3 (9600)"))
+                if (osVersion.Equals("6.3 (9600)") || osVersion.Substring(0, 2).Equals("10"))
                 {
                     targetDevices.Add(item.GetDirectoryEntry().Properties["dNSHostName"].Value.ToString());
                 };
